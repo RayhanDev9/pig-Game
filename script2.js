@@ -68,7 +68,7 @@ btnHold.addEventListener('click', function () {
       Number(scorePlayer1.textContent) + Number(cureentScore1.textContent);
     cureentScore1.textContent = 0;
 
-    if (Number(scorePlayer1.textContent) >= 10) {
+    if (Number(scorePlayer1.textContent) >= 50) {
       player1.classList.add('win');
       player2.classList.add('lose');
 

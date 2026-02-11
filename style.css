@@ -206,9 +206,15 @@ main {
 }
 
 @media (min-width: 0px) and (max-width: 576px) {
+  .container {
+    padding-left: 0;
+  }
   /* Player */
+
   .container .player {
     width: 30vw;
+    margin-left: 1rem;
+
   }
   .container .player .score-player .name {
     font-size: 0.6em;
@@ -221,7 +227,7 @@ main {
   }
   /* play game */
   .play-game {
-    left: 65.8%;
+    left: 60.8%;
     top: 18.4%;
     width: 5.5rem;
     height: 39%;
