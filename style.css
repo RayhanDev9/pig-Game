@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background: linear-gradient(to right, #00aaff, #0044cc);
+  color: #ffffff;
+  font-family: 'Manrope', sans-serif;
+  font-optical-sizing: auto;
+  font-size: 2em;
+  word-spacing: 1.1rem;
+  text-transform: uppercase;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  margin: auto;
+  width: 90vw;
+  height: 80vh;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+
+  flex-wrap: wrap;
+}
+
+/* Player */
+
+.container .player {
+  text-align: center;
+  width: 40%;
+  padding: 1rem;
+  /* margin-inline: auto; */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  transition: all 0.75s;
+}
+
+.container .player.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.container .player.lose {
+  background: grey;
+}
+
+.container .player.win {
+  background: gold;
+}
+
+.container .player .score-player {
+  width: 75%;
+  text-align: center;
+  padding: 3.75rem;
+}
+
+.container .player .score-player .name,
+.container .player .score-player .score {
+  text-align: center;
+}
+
+.container .player .score-player .score {
+  margin-top: 2rem;
+  font-size: 2.5em;
+}
+
+.container .player .current {
+  text-align: center;
+  padding: 1rem;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  width: 40%;
+  background-color: #0296e0;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  transition: all 0.75s;
+}
+
+/* play game */
+.play-game {
+  position: absolute;
+  left: 43%;
+  width: 10rem;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.3rem;
+  color: #ffffff;
+  z-index: 999;
+  text-transform: uppercase;
+}
+
+.play-game .dice {
+  width: 0rem;
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.2rem;
+  opacity: 1;
+  margin-inline: auto;
+  display: none;
+  opacity: 1;
+  transition: all 5s;
+}
+
+.play-game .dice.show {
+  width: 5.6rem;
+  opacity: 1;
+  display: block;
+}
+
+.btn {
+  background-color: rgb(255, 255, 255, 0.99);
+  color: rgba(0, 0, 0, 1);
+  border: none;
+  outline: none;
+  padding: 0.7rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  border-radius: 50rem;
+  transition: all 0.7s ease;
+}
+
+.btn:active {
+  transform: translate(0, 30%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.play-game .roll-dice-hold {
+  text-align: center;
+}
+
+.roll-dice-hold .btn--hold {
+  margin-top: 2rem;
+}
+
+@media (max-width: 992px) {
+  /* CSS di sini berlaku kalau layar ≤ 768px */
+  main {
+    height: auto;
+  }
+  .container {
+    display: block;
+    height: auto;
+  }
+
+  /* Player */
+  .container .player {
+    display: block;
+    width: 50vw;
+    margin-block: 2rem;
+  }
+
+  .container .player .score-player {
+    width: auto;
+    padding: 4px;
+  }
+
+  .container .player .score-player .name {
+    font-size: 1em;
+  }
+  .container .player .score-player .score {
+    font-size: 1em;
+  }
+  .container .player .current {
+    width: auto;
+    padding: 4px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Play game */
+  .play-game {
+    left: 72%;
+    top: 13.4%;
+    width: 10rem;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  /* Play game */
+  .play-game {
+    left: 65.8%;
+    top: 13.4%;
+    width: 10rem;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  /* Player */
+  .container .player {
+    width: 30vw;
+  }
+  .container .player .score-player .name {
+    font-size: 0.6em;
+  }
+  .container .player .score-player .score {
+    font-size: 0.6em;
+  }
+  .container .player .current {
+    font-size: 0.6em;
+  }
+  /* play game */
+  .play-game {
+    left: 65.8%;
+    top: 18.4%;
+    width: 5.5rem;
+    height: 39%;
+  }
+  .play-game .dice.show {
+    width: 3.6rem;
+  }
+
+  .btn {
+    font-size: 0.68rem;
+  }
+}

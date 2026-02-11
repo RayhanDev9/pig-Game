@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Klee+One&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Manrope:wght@200..800&family=Parkinsans:wght@600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <section class="player player-1 active">
+          <div class="score-player">
+            <h1 class="name ">player 1</h1>
+            <h2 class="score"  id="score-player-1">0</h2>
+          </div>
+          <div class="current">
+            <p class="cureent-label">cureent</p>
+            <p class="cureent-score" id="cureent-score-1">0</p>
+          </div>
+        </section>
+
+        <section class="play-game">
+          <button class="btn btn--new">🔄 New game</button>
+          <img src="img/dice-1.png" alt="Playing dice" class="dice" />
+          <div class="roll-dice-hold">
+            <button class="btn btn--roll">🎲 Roll dice</button>
+            <button class="btn btn--hold">📥 Hold</button>
+          </div>
+        </section>
+
+        <section class="player player-2 ">
+          <div class="score-player">
+            <h1 class="name" >player 2</h1>
+            <h2 class="score" id="score-player-2">0</h2>
+          </div>
+          <div class="current">
+            <p class="cureent-label">cureent</p>
+            <p class="cureent-score" id="cureent-score-2">0</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="script2.js"></script>
+  </body>
+</html>
