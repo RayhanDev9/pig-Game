@@ -40,23 +40,22 @@ main {
   margin: 5rem 2rem;
   border: none;
   background-color: #fff;
-  color: rgb(68, 68, 68,.4);
+  color: rgb(68, 68, 68);
   border-radius: 10rem;
   cursor: pointer;
-  opacity: 0.4;
   transition: all 0.7s ease;
+  transition: transform 0.3s ease;
 }
 
 .show-modal:hover {
-  opacity: 1;
-  color: rgb(68, 68, 68,1);
+  background-color: rgb(68, 68, 68);
+  color: #fff;
+  transform: translateY(-3px);
 }
 
 .show-modal:active {
-   opacity: 1;
-  color: rgb(68, 68, 68,1);
+  transform: translateY(-3px);
 }
-
 .close-modal {
   position: absolute;
   top: 1.2rem;
@@ -66,6 +65,7 @@ main {
   cursor: pointer;
   border: none;
   background: none;
+  font-size: 3.7rem;
 }
 /* -------------------------- */
 /* CLASSES TO MAKE MODAL WORK */
@@ -129,13 +129,13 @@ main {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: rgba(255, 255, 255, 0);
+  background: rgb(24, 32, 92, 0);
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
   transition: all 0.75s;
 }
 
 .container .player.active {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgb(24, 32, 92, 0.7);
 }
 
 .container .player.lose {
@@ -168,10 +168,16 @@ main {
   margin-inline: auto;
   margin-bottom: 1rem;
   width: 40%;
-  background-color: #0296e0;
+  background: rgb(24, 32, 92, 0);
+
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
   transition: all 0.75s;
+
+}
+
+.container .current.active-cruneent {
+  background: rgb(24, 32, 92, 0.7);
 }
 
 /* play game */
@@ -279,6 +285,10 @@ main {
     font-size: 1rem;
   }
 
+  .close-modal {
+    font-size: 3.1rem;
+  }
+
   /* Play game */
   .play-game {
     left: 72%;
@@ -295,6 +305,9 @@ main {
 
   .modal ol {
     font-size: 0.8rem;
+  }
+  .close-modal {
+    font-size: 2.5rem;
   }
   /* Play game */
   .play-game {
@@ -319,7 +332,9 @@ main {
     font-size: 0.8rem;
   }
 
- 
+  .close-modal {
+    font-size: 2.5rem;
+  }
 
   /* Player */
 
@@ -354,8 +369,8 @@ main {
   }
 }
 
-@media (max-width : 400px) {
-   .modal {
-     background-color: rgb(0, 170, 255,.4);
+@media (max-width: 400px) {
+  .modal {
+    background-color: rgb(0, 170, 255, 0.4);
   }
 }

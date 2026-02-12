@@ -17,6 +17,9 @@ const btnNew = document.querySelector('.btn--new');
 const cureentScore1 = document.querySelector('#cureent-score-1');
 const cureentScore2 = document.querySelector('#cureent-score-2');
 
+const cruneent1 = document.querySelector('.curren-1');
+const cruneent2 = document.querySelector('.curren-2');
+
 // score
 const scorePlayer1 = document.querySelector('#score-player-1');
 const scorePlayer2 = document.querySelector('#score-player-2');
@@ -52,6 +55,9 @@ btnRoll.addEventListener('click', function () {
 
       player1.classList.toggle('active');
       player2.classList.toggle('active');
+
+      cruneent1.classList.toggle('active-cruneent');
+      cruneent2.classList.toggle('active-cruneent');
     } else {
       cureentScore1.textContent = noDadu + Number(cureentScore1.textContent);
     }
@@ -62,6 +68,9 @@ btnRoll.addEventListener('click', function () {
 
       player1.classList.toggle('active');
       player2.classList.toggle('active');
+
+      cruneent1.classList.toggle('active-cruneent');
+      cruneent2.classList.toggle('active-cruneent');
     } else {
       cureentScore2.textContent = noDadu + Number(cureentScore2.textContent);
     }
@@ -83,6 +92,8 @@ btnHold.addEventListener('click', function () {
     } else {
       player1.classList.toggle('active');
       player2.classList.toggle('active');
+      cruneent1.classList.toggle('active-cruneent');
+      cruneent2.classList.toggle('active-cruneent');
 
       activePlayer = settingActivePlayer(activePlayer);
     }
@@ -100,6 +111,9 @@ btnHold.addEventListener('click', function () {
     } else {
       player1.classList.toggle('active');
       player2.classList.toggle('active');
+      cruneent1.classList.toggle('active-cruneent');
+      cruneent2.classList.toggle('active-cruneent');
+
       activePlayer = settingActivePlayer(activePlayer);
     }
   }
@@ -119,6 +133,9 @@ btnNew.addEventListener('click', function () {
   if (!player1.classList.contains('active')) {
     player1.classList.toggle('active');
     player2.classList.remove('active');
+
+    cruneent1.classList.toggle('active-cruneent');
+    cruneent2.classList.remove('active-cruneent');
   }
 
   btnHold.disabled = false;
