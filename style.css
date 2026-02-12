@@ -40,7 +40,7 @@ main {
   margin: 5rem 2rem;
   border: none;
   background-color: #fff;
-  color: #444;
+  color: rgb(68, 68, 68,.4);
   border-radius: 10rem;
   cursor: pointer;
   opacity: 0.4;
@@ -49,6 +49,12 @@ main {
 
 .show-modal:hover {
   opacity: 1;
+  color: rgb(68, 68, 68,1);
+}
+
+.show-modal:active {
+   opacity: 1;
+  color: rgb(68, 68, 68,1);
 }
 
 .close-modal {
