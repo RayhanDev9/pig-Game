@@ -208,12 +208,14 @@ main {
 @media (min-width: 0px) and (max-width: 576px) {
   .container {
     padding-left: 0;
+    box-sizing: border-box;
   }
   /* Player */
 
   .container .player {
     width: 30vw;
     margin-left: 1rem;
+    box-sizing: content-box;
 
   }
   .container .player .score-player .name {
@@ -227,16 +229,18 @@ main {
   }
   /* play game */
   .play-game {
-    left: 60.8%;
+    left: 58.8%;
     top: 18.4%;
     width: 5.5rem;
     height: 39%;
+    box-sizing: content-box;
+
   }
   .play-game .dice.show {
     width: 3.6rem;
   }
 
   .btn {
-    font-size: 0.68rem;
+    font-size: 0.7rem;
   }
 }

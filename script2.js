@@ -1,3 +1,9 @@
+// Pop up
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModal = document.querySelector('.close-modal');
+const btnsOpenModal = document.querySelector('.show-modal');
+
 // player
 const player1 = document.querySelector('.player-1');
 const player2 = document.querySelector('.player-2');
@@ -85,7 +91,7 @@ btnHold.addEventListener('click', function () {
       Number(scorePlayer2.textContent) + Number(cureentScore2.textContent);
     cureentScore2.textContent = 0;
 
-    if (Number(scorePlayer2.textContent) >= 10) {
+    if (Number(scorePlayer2.textContent) >= 50) {
       player1.classList.add('lose');
       player2.classList.add('win');
 
@@ -117,4 +123,29 @@ btnNew.addEventListener('click', function () {
 
   btnHold.disabled = false;
   btnRoll.disabled = false;
+});
+
+// Pop up
+
+const openModal = function () {
+  modal.classList.remove('hidden');
+  overlay.classList.remove('hidden');
+};
+
+const closeModal = function () {
+  modal.classList.add('hidden');
+  overlay.classList.add('hidden');
+};
+
+btnsOpenModal.addEventListener('click', openModal);
+
+btnCloseModal.addEventListener('click', closeModal);
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function (e) {
+  // console.log(e.key);
+
+  if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
 });
