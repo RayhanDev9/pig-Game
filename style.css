@@ -54,6 +54,8 @@ main {
 }
 
 .show-modal:active {
+  background-color: rgb(68, 68, 68);
+  color: #fff;
   transform: translateY(-3px);
 }
 .close-modal {
@@ -173,10 +175,9 @@ main {
   border-radius: 1rem;
   box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.3);
   transition: all 0.75s;
-
 }
 
-.container .current.active-cruneent {
+.container .player .current.active-cruneent {
   background: rgb(24, 32, 92, 0.7);
 }
 
@@ -277,6 +278,13 @@ main {
 
 @media (min-width: 768px) and (max-width: 992px) {
   /* Modal */
+      /* Modal */
+  .show-modal {
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: .7rem 1.4rem;
+  margin: 5rem 2.3rem;
+}
   .modal h1 {
     font-size: 2rem;
   }
@@ -299,6 +307,14 @@ main {
 
 @media (min-width: 576px) and (max-width: 768px) {
   /* Modal */
+    /* Modal */
+  .show-modal {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: .6rem 1.2rem;
+  margin: 4.5rem 2rem;
+}
+
   .modal h1 {
     font-size: 1.4rem;
   }
@@ -324,6 +340,13 @@ main {
   }
 
   /* Modal */
+  .show-modal {
+  font-size: .8rem;
+  font-weight: 500;
+  padding: .2rem .4rem;
+  margin: 4.5rem 2rem;
+}
+  
   .modal h1 {
     font-size: 1.3rem;
   }
